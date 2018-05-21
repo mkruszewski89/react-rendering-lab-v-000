@@ -5,8 +5,12 @@ class Animation extends React.Component {
     super(props);
 
     this.state = {
-      url: " http://placehold.it/500x150",
+      url: "http://placehold.it/500x150",
     };
+  }
+
+  componentWillUpdate() {
+    this.showLoadingBar()
   }
 
   getNewCat = () => {
